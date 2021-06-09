@@ -1,7 +1,8 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Logo = styled.img`
   display: flex;
+  margin-top: 5px;
   justify-content: space-between;
   align-items: center;
   width: 150px;
@@ -25,7 +26,7 @@ export const Button = styled.button`
 
 `;
 export const Wrapper = styled.form`
-  padding: 66rem 10rem;
+  padding: 36rem 10rem;
   background-color: white;
 
   & ${Button}{
@@ -54,7 +55,7 @@ export const WrapperPassword = styled.div`
 `;
 export const IconVisibility = styled.i`
   position: absolute;
-  top: 38%;
+  top: 29px;
   right: 12%;
   width: 22px;
   height: 22px;
@@ -77,16 +78,28 @@ export const LoginBox = styled.section`
   box-shadow: 0rem 13rem 40rem -13rem rgba(0,0,0,0.75);
 `;
 
-export const Label = styled.label`
+export const Label = styled.span`
   font-size: 18rem;
   margin: 20rem 0 1rem 25rem;
   color: var(--color-black-dark);
   font-weight: 20px;
   text-align: justify;
   text-justify: center;
+
   @media(max-width: 800px){
-    font-size: 15px;  
+    font-size: 12px;  
   }
+
+  ${({ small }) => 
+  small &&
+  css`
+    margin: 2rem 0 1rem 25rem;
+    font-size: 12rem;
+    color: var(--color-red);
+    font-weight: 11px;
+    text-align: justify;
+    text-justify: center;
+  `};
 
 `;
 
